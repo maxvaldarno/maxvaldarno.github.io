@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Aphrodites — Illustrated Art Book on Greek Mythology | Max Valdarno</title>
+  <meta name="description" content="100 full-page original illustrations of Aphrodite in the Pre-Raphaelite tradition. A fine art book exploring the Greek goddess as Jungian archetype. By Max Valdarno.">
+  <meta name="keywords" content="Aphrodite art book, Greek mythology illustrated, Pre-Raphaelite digital art, figurative painting, Max Valdarno, goddess of beauty, Jungian archetype, fine art book">
+  <meta name="author" content="Max Valdarno">
+  <meta property="og:title" content="100 Aphrodites — Illustrated Art Book | Max Valdarno">
+  <meta property="og:description" content="100 full-page original illustrations of Aphrodite, rendered in the tradition of 19th-century academic and Pre-Raphaelite figurative painting.">
+  <meta property="og:type" content="book">
+  <meta property="og:url" content="https://maxvaldarno.github.io">
+  <link rel="canonical" href="https://maxvaldarno.github.io">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "100 Aphrodites: Capturing the enigma of divine seduction",
+    "author": {
+      "@type": "Person",
+      "name": "Max Valdarno",
+      "nationality": "Italian",
+      "description": "Italian digital artist working in the Pre-Raphaelite and academic figurative tradition"
+    },
+    "isbn": "9798867362430",
+    "datePublished": "2023",
+    "inLanguage": "en",
+    "genre": ["Art", "Greek Mythology", "Figurative Painting", "Archetypal Psychology"],
+    "description": "100 full-page original illustrations of Aphrodite in the Pre-Raphaelite tradition, exploring the Greek goddess as Jungian archetype.",
+    "url": "https://www.amazon.com/dp/B0CN5974RQ",
+    "image": "https://lh3.googleusercontent.com/sitesv/AA5AbUCQ8hsr1C_0x7kSAZLkQX0skKn0vpznsBztBHbWJAdYcRyULGZhaDSP8Y6a2N3H_v-RxdLOXvWa-pyS4R0zzOFUI6D3ulwrophtqdM3nQRni6C8ayxyM8NgJD0a3WxcgHTLJpzAyaoAhbG06aE3gElYMbnnR6ZKLJ4QAxThyHhR96zP4WgWWezILaw=w1280"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black:   #0e0c0a;
+      --charcoal:#1a1714;
+      --brown:   #2a2018;
+      --gold:    #c9a84c;
+      --gold-lt: #e8c97a;
+      --cream:   #f0ead8;
+      --muted:   #8a7d6a;
+      --white:   #faf7f0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 4rem;
+      background: rgba(14,12,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      transition: padding 0.3s;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 8rem 4rem 4rem;
+      gap: 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-text { position: relative; }
+    .hero-eyebrow {
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 6vw, 6rem);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-lt);
+    }
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.6s;
+    }
+    .hero-desc {
+      font-size: 0.9rem;
+      color: #a09080;
+      max-width: 38ch;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.8s;
+    }
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 1s;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 400;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      border: 1px solid rgba(201,168,76,0.4);
+      color: var(--gold);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold-lt); }
+
+    .hero-image {
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards 0.5s;
+    }
+    .hero-image img {
+      width: 100%;
+      max-width: 480px;
+      display: block;
+      margin: 0 auto;
+      filter: sepia(0.15) brightness(0.92);
+      transition: filter 0.5s;
+    }
+    .hero-image img:hover { filter: sepia(0) brightness(1); }
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(transparent, var(--black));
+      pointer-events: none;
+    }
+    .hero-ornament {
+      position: absolute;
+      top: 50%;
+      right: -60px;
+      transform: translateY(-50%);
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 7rem 4rem; }
+    .section-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold-lt); }
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 2.5rem;
+      opacity: 0.5;
+    }
+
+    /* ── BOOK SECTION ── */
+    #book {
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+    #book::before {
+      content: 'APHRODITE';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18vw;
+      font-weight: 300;
+      color: rgba(201,168,76,0.03);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: 0.1em;
+    }
+    .book-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 6rem;
+      align-items: start;
+      position: relative;
+    }
+    .book-cover {
+      position: relative;
+    }
+    .book-cover img {
+      width: 100%;
+      display: block;
+      box-shadow: 20px 20px 60px rgba(0,0,0,0.6), -2px -2px 0 rgba(201,168,76,0.2);
+      filter: sepia(0.1);
+    }
+    .book-badge {
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      font-weight: 400;
+    }
+    .book-content p {
+      font-size: 0.95rem;
+      color: #b0a090;
+      margin-bottom: 1.2rem;
+      max-width: 55ch;
+    }
+    .book-content p strong { color: var(--cream); font-weight: 400; }
+    .book-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(201,168,76,0.15);
+      margin: 2.5rem 0;
+    }
+    .stat {
+      background: var(--charcoal);
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .amazon-links { margin-top: 2rem; }
+    .amazon-links h4 {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+    .amazon-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .amazon-link {
+      display: inline-block;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid rgba(201,168,76,0.25);
+      color: var(--muted);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+    .amazon-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,168,76,0.05);
+    }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--black); }
+    .gallery-header {
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+    }
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      columns: 4;
+      column-gap: 0.8rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 0.8rem;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      filter: sepia(0.2) brightness(0.88);
+      transition: filter 0.5s, transform 0.6s;
+    }
+    .gallery-item:hover img {
+      filter: sepia(0) brightness(1);
+      transform: scale(1.03);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 50%, rgba(14,12,10,0.85));
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--gold-lt);
+      font-style: italic;
+    }
+    .gallery-note {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+    .gallery-note a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      transition: border-color 0.3s;
+    }
+    .gallery-note a:hover { border-color: var(--gold); }
+
+    /* ── AUTHOR ── */
+    #author {
+      background: var(--brown);
+      position: relative;
+    }
+    .author-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    .author-content p {
+      font-size: 0.95rem;
+      color: #a09080;
+      margin-bottom: 1.2rem;
+      max-width: 60ch;
+    }
+    .author-content p strong { color: var(--cream); font-weight: 400; }
+    .author-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold-lt);
+      line-height: 1.5;
+      padding-left: 1.5rem;
+      border-left: 1px solid rgba(201,168,76,0.4);
+      margin: 2.5rem 0;
+    }
+    .author-portrait {
+      position: relative;
+    }
+    .author-portrait-frame {
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 1.5rem;
+      position: relative;
+    }
+    .author-portrait-frame::before {
+      content: '';
+      position: absolute;
+      top: -8px; left: -8px;
+      right: 8px; bottom: 8px;
+      border: 1px solid rgba(201,168,76,0.1);
+      pointer-events: none;
+    }
+    .author-portrait-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--charcoal), var(--brown));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      color: rgba(201,168,76,0.2);
+      font-style: italic;
+    }
+    .author-caption {
+      margin-top: 1rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* ── SHOP ── */
+    #shop { background: var(--charcoal); }
+    .shop-inner { max-width: 1100px; margin: 0 auto; }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(201,168,76,0.1);
+      margin-top: 3rem;
+    }
+    .shop-card {
+      background: var(--charcoal);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: block;
+    }
+    .shop-card:hover { background: rgba(201,168,76,0.05); }
+    .shop-icon {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .shop-name {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+    .shop-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--black);
+      text-align: center;
+    }
+    .contact-inner { max-width: 600px; margin: 0 auto; }
+    .contact-inner p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+    .contact-email {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--gold-lt);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .contact-email:hover { color: var(--white); border-color: var(--gold); }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .social-link {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .social-link:hover { color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 4rem;
+      background: var(--black);
+      border-top: 1px solid rgba(201,168,76,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.3s; }
+    footer a:hover { color: var(--gold); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
+      .nav-links { display: none; }
+      #hero { grid-template-columns: 1fr; padding: 7rem 2rem 3rem; gap: 2.5rem; }
+      .hero-image { order: -1; }
+      .hero-image img { max-width: 320px; }
+      section { padding: 5rem 2rem; }
+      .book-inner, .author-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .gallery-grid { columns: 2; }
+      .shop-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">Max Valdarno</a>
+    <ul class="nav-links">
+      <li><a href="#book">The Book</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#author">Author</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Max Valdarno · 2023</p>
+      <h1 class="hero-title">100<br><em>Aphrodites</em></h1>
+      <p class="hero-subtitle">Capturing the enigma of divine seduction</p>
+      <p class="hero-desc">One hundred original full-page illustrations of Aphrodite — the Greek goddess of beauty, love, and sensuality — rendered in the tradition of 19th-century academic and Pre-Raphaelite figurative painting.</p>
+      <div class="btn-group">
+        <a href="https://www.amazon.com/dp/B0CN5974RQ" target="_blank" rel="noopener" class="btn-primary">Buy on Amazon</a>
+        <a href="#gallery" class="btn-ghost">View Gallery</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUD_mWEIHhRxUFLQ3OWaBSj0wUh5I7MDynHwLJ0BJwOvAlsNHpphxT1KgOOsjKNoaW1ii-hxbeXGdMQRnzePbB9XGaqAaLEKFU8ATkgk9e3PoNALv9uH02k1mcTrVxLXjWq5c-N1zqv0Gnb5wKO4bVCtnYEQUV0kQFQRQ53TzYNkX2OQVKB_1E5S9iqsQ=w1280" alt="Aphrodite n.14 — Max Valdarno" loading="eager">
+      <div class="hero-ornament"></div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section id="book">
+    <div class="book-inner">
+      <div class="book-cover reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDvlrV0jZfkr7R9A-bFNy7-h8SaZCkRud--WBJ1p4n8Co0lu8mrjJqJhbgicVJVPI-6hG9ZOPG0hkq3PFBySDuvJOJXODHbzVyOG9z_1pnNWp5Gx1AECmZz6hI-mB_0u96TjzUF6Y2VQzxnRH_O3h96ylSXHn5f1vDGSmxFXY8c_X8frmEQE4YYnz=w1280" alt="Aphrodite n.67 — cover detail">
+        <div class="book-badge">Now Available</div>
+      </div>
+      <div class="book-content reveal">
+        <p class="section-label">The Book</p>
+        <h2 class="section-title">A fine art book<br>unlike any <em>other</em></h2>
+        <div class="divider"></div>
+        <p>What does Aphrodite — the Greek goddess of beauty, love, and seduction — truly look like? <strong>100 Aphrodites</strong> answers with one hundred distinct visions.</p>
+        <p>Each illustration captures the goddess in a specific encounter: in the Library of Alexandria, on a Macedonian battlefield, beside the Nile, in a Roman bathhouse. Each one is different. Each one is fleeting.</p>
+        <p>This is not a mythology handbook. It is a <strong>visual meditation</strong> — an investigation into the archetypal figure of the feminine as theorized by depth psychology, brought to life through digital painting of exceptional quality. The work explores the fundamental paradox of Aphrodite: simultaneously free and powerful, vulnerable and invincible.</p>
+        <p>Ideal for collectors and enthusiasts of <strong>figurative art, Greek mythology, Jungian archetypes, Pre-Raphaelite painting</strong>, and the classical tradition of the female figure in Western art.</p>
+
+        <div class="book-stats">
+          <div class="stat">
+            <span class="stat-num">100</span>
+            <span class="stat-label">Illustrations</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">Full</span>
+            <span class="stat-label">Page format</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">11</span>
+            <span class="stat-label">Amazon stores</span>
+          </div>
+        </div>
+
+        <div class="amazon-links">
+          <h4>Available on Amazon worldwide</h4>
+          <div class="amazon-grid">
+            <a href="https://www.amazon.com/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇺🇸 US</a>
+            <a href="https://www.amazon.co.uk/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇬🇧 UK</a>
+            <a href="https://www.amazon.it/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇮🇹 IT</a>
+            <a href="https://www.amazon.de/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇩🇪 DE</a>
+            <a href="https://www.amazon.fr/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇫🇷 FR</a>
+            <a href="https://www.amazon.es/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇪🇸 ES</a>
+            <a href="https://www.amazon.ca/dp/B0CN57LJ85" target="_blank" rel="noopener" class="amazon-link">🇨🇦 CA</a>
+            <a href="https://www.amazon.com.au/dp/B0CN57LJ85" target="_blank" rel="noopener" class="amazon-link">🇦🇺 AU</a>
+            <a href="https://www.amazon.nl/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇳🇱 NL</a>
+            <a href="https://www.amazon.pl/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇵🇱 PL</a>
+            <a href="https://www.amazon.se/dp/B0CN5974RQ" target="_blank" rel="noopener" class="amazon-link">🇸🇪 SE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="gallery-header reveal">
+      <p class="section-label">Gallery</p>
+      <h2 class="section-title">Twenty <em>encounters</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCQ8hsr1C_0x7kSAZLkQX0skKn0vpznsBztBHbWJAdYcRyULGZhaDSP8Y6a2N3H_v-RxdLOXvWa-pyS4R0zzOFUI6D3ulwrophtqdM3nQRni6C8ayxyM8NgJD0a3WxcgHTLJpzAyaoAhbG06aE3gElYMbnnR6ZKLJ4QAxThyHhR96zP4WgWWezILaw=w1280" alt="Aphrodite n.14">
+        <div class="gallery-overlay"><span class="gallery-num">n. 14</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCKadSH6BupV-0uYphAncUWk8mD43m5gDYo43_O9CM-QgC6eOknJDW6n2BMoG9R8gU-ZtAANySbGMoG9R8gU-ZtAANySbGMoG9R8gU-ZtAANySbGm9Kzognd_nCJDqv18_s_923APUKLu-8KZogNrDDzzHADXJEtSwFhw0_SS2a8fx-ZrhZpIe2l32jesL5HkM1AjcSm25v29mBhnjTpHoXAwso-ofS1jzTc0NAzPcgHEE8Gn6vIEIdgmZGbdO7tfLVf1Wc=w1280" alt="Aphrodite n.51" onerror="this.src='https://lh3.googleusercontent.com/sitesv/AA5AbUCKadSH6BupV-0uYphAncUWk8mD43m5gDYo43_O9CM-QgC6eOknJDW6n2BMoG9R8gU-ZtAANySbGm9Kzognd_nCJDqv18_s_923APUKLu-8KZogNrDDzzHADXJEtSwFhw0_SS2a8fx-ZrhZpIe2l32jesL5HkM1AjcSm25v29mBhnjTpHoXAwso-ofS1jzTc0NAzPcgHEE8Gn6vIEIdgmZGbdO7tfLVf1Wc=w400'">
+        <div class="gallery-overlay"><span class="gallery-num">n. 51</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDYdsMd6zzkWzWElaMKw85dO8Tcp4wSNMyPA0Q0WIICcAAnRVk-hwGd3aF2goNZPCpeQBevyAYEj_zuYR8bnZ6_pPmu4afmBNIDoaWADHPJbfpURgwu00zc8YAToMKeWw397MNq2zkbXDtZ7ryuJEkDYF4tFV5dS8lNWhknMBreEoLaH9_IosJ2O4EU95Bxj4UkqNPawgnwNBJFx50MQfSJ-w73qdIyGkQf-OM=w1280" alt="Aphrodite n.29">
+        <div class="gallery-overlay"><span class="gallery-num">n. 29</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDLGY8G65IcGO827ezy8jAFu1eovopfdNkit_AMnch-9tXFuQysHqIGCv4OAw1Za548m1s-mfuuYGv6HypyKlaf4sD7LRMtl7JSb2AZileHUEFEERi1m9oaXRv1_nCJDqv18_s_923APUKLu-8KZogNrDDzzHADXJEtSwFhw0_SS2a8fx-ZrhZpIe2l32jesL5HkM1AjcSm25v29mBhnjTpHoXAwso-ofS1jzTc0NAzPcgHEE8Gn6vIEIdgmZGbdO7tfLVf1Wc=w1280" alt="Aphrodite n.21" onerror="this.src='https://lh3.googleusercontent.com/sitesv/AA5AbUDLGY8G65IcGO827ezy8jAFu1eovopfdNkit_AMnch-9tXFuQysHqIGCv4OAw1Za548m1s-mfuuYGv6HypyKlaf4sD7LRMtl7JSb2AZileHUEFEERi1m9oaXRv1_nCJDqv18_s_923APUKLu-8KZogNrDDzzHADXJEtSwFhw0_SS2a8fx-ZrhZpIe2l32jesL5HkM1AjcSm25v29mBhnjTpHoXAwso-ofS1jzTc0NAzPcgHEE8Gn6vIEIdgmZGbdO7tfLVf1Wc=w400'">
+        <div class="gallery-overlay"><span class="gallery-num">n. 21</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCMhZsguLW4XjBgpwz2VtNz7VG8QygoeBU5d-vqCEuPL3GqHoR6sHqAUFDTWvXfcpzgC9woN96xF2WGauXtvhogo02rnwuQ3we9A9lwlpjUpj0YoiqamB8tnwFm3lKIpwMTm6Z7-T41Y0wyJyWsjW9ynAII7ebtHgqdb7SrnKf_AinkCB5vBa610bmUfRIPyyzJcnDX8WLT8iTlTowHom2Y_bdPWUmePShSQ=w1280" alt="Aphrodite n.39">
+        <div class="gallery-overlay"><span class="gallery-num">n. 39</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCXC3Z-4miI60VQbAiLt2ApIyzA1EkhOtTrJFdESOmPtylxhaBw2al1KRAw0KqQjMR0CbbfSojZ9ZvTj485JxiXpnul-6oaHrlTnmFTM_M0o_gxN4rD-QeR8C18Klj7jFCbCwPoVypnpfXJjIz2lZ4I2ECXzysGtazVoI97FPGYX1gfyX2npThtFPwM8kcy7eYOkVKNMfXgxp9b2Do3d3661qoSro9qxim9=w1280" alt="Aphrodite n.23">
+        <div class="gallery-overlay"><span class="gallery-num">n. 23</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBaBxiZC6OgkdEdgzYTjn_V-S0NxF0Snwd3UtT3mdOEYambvzamFHB73maAxMOYDkctW8Lnk_YJGUSHmMep3st53KJxZSIT45IhO769ZulbMaLX5MinB-3mRKXrveoE4fwq09IMzfFSByYBGsN5dmrIh2fZzSLgqv47EyDQKrA9Z2lp5Nwy2N-0N2YqvzXa9sQuszxWLeJ4pWUldvWdTyt7dj0XGexasyup8YSI=w1280" alt="Aphrodite n.8">
+        <div class="gallery-overlay"><span class="gallery-num">n. 8</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDUBpMrqPIVs_6pmViDEDz7VG8QygoeBU5d-vqCEuPL3GqHoR6sHqAUFDTWvXfcpzgC9woN96xF2WGauXtvhogo02rnwuQ3we9A9lwlpjUpj0YoiqamB8tnwFm3lKIpwMTm6Z7-T41Y0wyJyWsjW9ynAII7ebtHgqdb7SrnKf_AinkCB5vBa610bmUfRIPyyzJcnDX8WLT8iTlTowHom2Y_bdPWUmePShSQ=w1280" alt="Aphrodite n.10">
+        <div class="gallery-overlay"><span class="gallery-num">n. 10</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUAEvuo_61wD6gHLRSzOQ1d_c9wv2bEpsDg9UTCrxnxqvrw90Ss-xIwWX6Sb6fAEu0lI7adpFLWBfdbP3Qi6D1rPLek1-XxLg8sdgzHdjMMelc4D2FIs95qkZ1XpB-CsZIa_feUSGI2g37T4fMXfJG5FLUg1Wnwg3TmolD18aELJoy0L0MyzyixIV00wB_0Yxgu-f-RYhl5_2TDD7Gv0ycl=w1280" alt="Aphrodite n.63" onerror="this.src='https://lh3.googleusercontent.com/sitesv/AA5AbUD3DBE1s7YH9DtgQZe6hnoM080lVW2mKki2UkthEenEtyCrFLJxFdzZnC_NY1UZlNzT7p0ly5EfFk0nKiyrQCiyrQTuXxvk2m-gVWTJo-o_ToBoZGS_VJUEt2386mOPX9tNWQsCh5ZSuHDw8hZmULBWfrnRqWzcU7KZZn8uztTILXersIMywrmyMVWPtexc_Xevi51V9quwogbdDHQm4-bQcVj8b5RA6jzXnvzeXVoIU=w400'">
+        <div class="gallery-overlay"><span class="gallery-num">n. 63</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBAyXJIZ5eVxIpr5NKCuP2u9lhEcOc5aDwS_peumwViPJmXPRaOA0TUcSCXHgUzq2k9z8FjyA3xo57gP-PIFxqKZR_dxfBanpRgxwDjS8RNHpiArpE8LIJLJw8orAI_6nXvlTktP0DnjUsrifG7Rd2L-pI67Bosft6LSrQAtk0AdJ3gCBwOGErJeVg9ziAhnRFWqPdf2wMphT9M5bKkeKEyyXXa7egpX9E5Ib6U=w1280" alt="Aphrodite n.69">
+        <div class="gallery-overlay"><span class="gallery-num">n. 69</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDr7bANH9DtgQZe6hnoM080lVW2mKki2UkthEenEtyCrFLJxFdzZnC_NY1UZlNzT7p0ly5EfFk0nKiyrQTuXxvk2m-gVWTJo-o_ToBoZGS_VJUEt2386mOPX9tNWQsCh5ZSuHDw8hZmULBWfrnRqWzcU7KZZn8uztTILXersIMywrmyMVWPtexc_Xevi51V9quwogbdDHQm4-bQcVj8b5RA6jzXnvzeXVoIU=w1280" alt="Aphrodite n.67">
+        <div class="gallery-overlay"><span class="gallery-num">n. 67</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUD3DBE1s7YH9DtgQZe6hnoM080lVW2mKki2UkthEenEtyCrFLJxFdzZnC_NY1UZlNzT7p0ly5EfFk0nKiyrQTuXxvk2m-gVWTJo-o_ToBoZGS_VJUEt2386mOPX9tNWQsCh5ZSuHDw8hZmULBWfrnRqWzcU7KZZn8uztTILXersIMywrmyMVWPtexc_Xevi51V9quwogbdDHQm4-bQcVj8b5RA6jzXnvzeXVoIU=w1280" alt="Aphrodite n.33">
+        <div class="gallery-overlay"><span class="gallery-num">n. 33</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCbW2xq0Zq23gxJGTB9JLhAaQQQCZXVWRrFwnD_P0BkyfBhslYh78m_xRXCsCfMt3nIgt5HNAUsiWK6GHbsmYDGNnC0ov74XxfPzvuWNYlZd7jD-wz1Kzog-6A7KSme2zkbXDtZ7ryuJEkDYF4tFV5dS8lNWhknMBreEoLaH9_IosJ2O4EU95Bxj4UkqNPawgnwNBJFx50MQfSJ-w73qdIyGkQf-OM=w1280" alt="Aphrodite n.99" onerror="this.src='https://lh3.googleusercontent.com/sitesv/AA5AbUDvlrV0jZfkr7R9A-bFNy7-h8SaZCkRud--WBJ1p4n8Co0lu8mrjJqJhbgicVJVPI-6hG9ZOPG0hkq3PFBySDuvJOJXODHbzVyOG9z_1pnNWp5Gx1AECmZz6hI-mB_0u96TjzUF6Y2VQzxnRH_O3h96ylSXHn5f1vDGSmxFXY8c_X8frmEQE4YYnz=w400'">
+        <div class="gallery-overlay"><span class="gallery-num">n. 99</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDvlrV0jZfkr7R9A-bFNy7-h8SaZCkRud--WBJ1p4n8Co0lu8mrjJqJhbgicVJVPI-6hG9ZOPG0hkq3PFBySDuvJOJXODHbzVyOG9z_1pnNWp5Gx1AECmZz6hI-mB_0u96TjzUF6Y2VQzxnRH_O3h96ylSXHn5f1vDGSmxFXY8c_X8frmEQE4YYnz=w1280" alt="Aphrodite n.78">
+        <div class="gallery-overlay"><span class="gallery-num">n. 78</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCQ8hsr1C_0x7kSAZLkQX0skKn0vpznsBztBHbWJAdYcRyULGZhaDSP8Y6a2N3H_v-RxdLOXvWa-pyS4R0zzOFUI6D3ulwrophtqdM3nQRni6C8ayxyM8NgJD0a3WxcgHTLJpzAyaoAhbG06aE3gElYMbnnR6ZKLJ4QAxThyHhR96zP4WgWWezILaw=w1280" alt="Aphrodite n.83">
+        <div class="gallery-overlay"><span class="gallery-num">n. 83</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCMhZsguLW4XjBgpwz2VtNz7VG8QygoeBU5d-vqCEuPL3GqHoR6sHqAUFDTWvXfcpzgC9woN96xF2WGauXtvhogo02rnwuQ3we9A9lwlpjUpj0YoiqamB8tnwFm3lKIpwMTm6Z7-T41Y0wyJyWsjW9ynAII7ebtHgqdb7SrnKf_AinkCB5vBa610bmUfRIPyyzJcnDX8WLT8iTlTowHom2Y_bdPWUmePShSQ=w1280" alt="Aphrodite detail">
+        <div class="gallery-overlay"><span class="gallery-num">n. 39</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUDYdsMd6zzkWzWElaMKw85dO8Tcp4wSNMyPA0Q0WIICcAAnRVk-hwGd3aF2goNZPCpeQBevyAYEj_zuYR8bnZ6_pPmu4afmBNIDoaWADHPJbfpURgwu00zc8YAToMKeWw397MNq2zkbXDtZ7ryuJEkDYF4tFV5dS8lNWhknMBreEoLaH9_IosJ2O4EU95Bxj4UkqNPawgnwNBJFx50MQfSJ-w73qdIyGkQf-OM=w1280" alt="Aphrodite detail 2">
+        <div class="gallery-overlay"><span class="gallery-num">n. 29</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUCXC3Z-4miI60VQbAiLt2ApIyzA1EkhOtTrJFdESOmPtylxhaBw2al1KRAw0KqQjMR0CbbfSojZ9ZvTj485JxiXpnul-6oaHrlTnmFTM_M0o_gxN4rD-QeR8C18Klj7jFCbCwPoVypnpfXJjIz2lZ4I2ECXzysGtazVoI97FPGYX1gfyX2npThtFPwM8kcy7eYOkVKNMfXgxp9b2Do3d3661qoSro9qxim9=w1280" alt="Aphrodite detail 3">
+        <div class="gallery-overlay"><span class="gallery-num">n. 23</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBaBxiZC6OgkdEdgzYTjn_V-S0NxF0Snwd3UtT3mdOEYambvzamFHB73maAxMOYDkctW8Lnk_YJGUSHmMep3st53KJxZSIT45IhO769ZulbMaLX5MinB-3mRKXrveoE4fwq09IMzfFSByYBGsN5dmrIh2fZzSLgqv47EyDQKrA9Z2lp5Nwy2N-0N2YqvzXa9sQuszxWLeJ4pWUldvWdTyt7dj0XGexasyup8YSI=w1280" alt="Aphrodite detail 4">
+        <div class="gallery-overlay"><span class="gallery-num">n. 8</span></div>
+      </div>
+      <div class="gallery-item reveal">
+        <img src="https://lh3.googleusercontent.com/sitesv/AA5AbUBAyXJIZ5eVxIpr5NKCuP2u9lhEcOc5aDwS_peumwViPJmXPRaOA0TUcSCXHgUzq2k9z8FjyA3xo57gP-PIFxqKZR_dxfBanpRgxwDjS8RNHpiArpE8LIJLJw8orAI_6nXvlTktP0DnjUsrifG7Rd2L-pI67Bosft6LSrQAtk0AdJ3gCBwOGErJeVg9ziAhnRFWqPdf2wMphT9M5bKkeKEyyXXa7egpX9E5Ib6U=w1280" alt="Aphrodite detail 5">
+        <div class="gallery-overlay"><span class="gallery-num">n. 69</span></div>
+      </div>
+    </div>
+    <p class="gallery-note">Showing 20 of 100 illustrations. <a href="https://www.redbubble.com/people/MaxValdarno/explore" target="_blank" rel="noopener">Browse prints on Redbubble →</a></p>
+  </section>
+
+  <!-- AUTHOR -->
+  <section id="author">
+    <div class="author-inner">
+      <div class="author-content reveal">
+        <p class="section-label">The Artist</p>
+        <h2 class="section-title">Max <em>Valdarno</em></h2>
+        <div class="divider"></div>
+        <blockquote class="author-quote">"Just as the gods created mankind, so too did mankind create the gods. In this mutual creation, we share a unique connection with the divine."</blockquote>
+        <p><strong>Max Valdarno</strong> (born 1972, Tuscany) is an Italian digital artist whose work centers on a single, inexhaustible subject: Aphrodite, the Greek goddess of beauty and sensuality.</p>
+        <p>Self-taught, Valdarno draws from the tradition of <strong>19th-century European academic painting</strong> and the <strong>Pre-Raphaelite Brotherhood</strong> — artists who believed that beauty itself was a form of truth. His paintings combine the compositional rigor of classical figurative art with the expressive possibilities of digital media.</p>
+        <p>His major work, <em>100 Aphrodites</em> (2023), brings together one hundred original full-page illustrations of the goddess. The project is both an artistic undertaking and an investigation into the <strong>archetypal figure of the feminine</strong> — what depth psychology, from Jung to Hillman, identifies as one of the foundational archetypes of human experience.</p>
+        <p>Valdarno lives in Friuli, northeastern Italy.</p>
+      </div>
+      <div class="author-portrait reveal">
+        <div class="author-portrait-frame">
+          <div class="author-portrait-placeholder">M·V</div>
+          <p class="author-caption">Max Valdarno · Friuli, Italy</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="shop">
+    <div class="shop-inner">
+      <div class="reveal">
+        <p class="section-label">Shop</p>
+        <h2 class="section-title">Prints &amp; <em>Originals</em></h2>
+        <div class="divider"></div>
+        <p style="color:var(--muted); font-size:0.9rem; max-width:55ch;">Canvas prints, high-resolution files, merchandise, and NFTs — bring Aphrodite home.</p>
+      </div>
+      <div class="shop-grid reveal">
+        <a href="https://www.redbubble.com/people/MaxValdarno/explore" target="_blank" rel="noopener" class="shop-card">
+          <div class="shop-icon">Rb</div>
+          <p class="shop-name">Redbubble</p>
+          <p class="shop-desc">Prints, apparel &amp; home decor</p>
+        </a>
+        <a href="https://society6.com/maxvaldarno6499ceda16664/designs" target="_blank" rel="noopener" class="shop-card">
+          <div class="shop-icon">S6</div>
+          <p class="shop-name">Society6</p>
+          <p class="shop-desc">Canvas prints &amp; art prints</p>
+        </a>
+        <a href="https://maxvaldarno.etsy.com" target="_blank" rel="noopener" class="shop-card">
+          <div class="shop-icon">Et</div>
+          <p class="shop-name">Etsy</p>
+          <p class="shop-desc">Hi-res files &amp; special editions</p>
+        </a>
+        <a href="https://opensea.io/collection/100aphrodites" target="_blank" rel="noopener" class="shop-card">
+          <div class="shop-icon">♦</div>
+          <p class="shop-name">OpenSea</p>
+          <p class="shop-desc">NFT collection</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Get in <em>touch</em></h2>
+      <div class="divider" style="margin: 0 auto 2.5rem;"></div>
+      <p>For special requests, collaborations, commissions, or press inquiries.</p>
+      <a href="mailto:max.valdarno@gmail.com" class="contact-email">max.valdarno@gmail.com</a>
+      <div class="social-links">
+        <a href="https://www.instagram.com/max.valdarno/" target="_blank" rel="noopener" class="social-link">Instagram</a>
+        <a href="https://twitter.com/MaxValdarno" target="_blank" rel="noopener" class="social-link">X / Twitter</a>
+        <a href="https://www.facebook.com/max.valdarno/" target="_blank" rel="noopener" class="social-link">Facebook</a>
+        <a href="https://www.deviantart.com/maxvaldarno" target="_blank" rel="noopener" class="social-link">DeviantArt</a>
+        <a href="https://independent.academia.edu/MaxValdarno" target="_blank" rel="noopener" class="social-link">Academia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 Max Valdarno. All rights reserved.</span>
+    <span>
+      <a href="#hero">Top</a> &nbsp;·&nbsp;
+      <a href="https://www.amazon.com/dp/B0CN5974RQ" target="_blank" rel="noopener">Amazon</a> &nbsp;·&nbsp;
+      <a href="https://independent.academia.edu/MaxValdarno" target="_blank" rel="noopener">Academia.edu</a>
+    </span>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('visible');
+          // Staggered children
+          const children = el.target.querySelectorAll('.gallery-item.reveal');
+          children.forEach((child, i) => {
+            setTimeout(() => child.classList.add('visible'), i * 80);
+          });
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Nav shrink on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.padding = window.scrollY > 60 ? '0.8rem 4rem' : '1.2rem 4rem';
+    });
+  </script>
+</body>
+</html>
