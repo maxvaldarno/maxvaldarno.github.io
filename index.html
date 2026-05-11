@@ -585,6 +585,61 @@
     footer a { color: var(--muted); text-decoration: none; transition: color 0.3s; }
     footer a:hover { color: var(--gold); }
 
+
+    /* ── LIGHTBOX ── */
+    .gallery-item { cursor: zoom-in; }
+    .gallery-item img {
+      height: 260px;
+      object-fit: cover;
+      object-position: center 15%;
+    }
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(14,12,10,0.95);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+      box-shadow: 0 0 80px rgba(0,0,0,0.8);
+      animation: lbIn 0.25s ease;
+    }
+    @keyframes lbIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    #lightbox-num {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--gold-lt);
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    #lightbox-close:hover { color: var(--gold); }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -706,7 +761,7 @@
   <section id="gallery">
     <div class="gallery-header reveal">
       <p class="section-label">Gallery</p>
-      <h2 class="section-title">Twenty <em>encounters</em></h2>
+      <h2 class="section-title">Sixteen <em>encounters</em></h2>
       <div class="divider"></div>
     </div>
     <div class="gallery-grid">
@@ -723,7 +778,7 @@
         <div class="gallery-overlay"><span class="gallery-num">n. 29</span></div>
       </div>
       <div class="gallery-item reveal">
-        <img src="21.wonder_1682388404892.jpg" alt="Aphrodite n.21">
+        <img src="21.wonder_1681828404892.jpg" alt="Aphrodite n.21">
         <div class="gallery-overlay"><span class="gallery-num">n. 21</span></div>
       </div>
       <div class="gallery-item reveal">
@@ -735,7 +790,7 @@
         <div class="gallery-overlay"><span class="gallery-num">n. 23</span></div>
       </div>
       <div class="gallery-item reveal">
-        <img src="08.wonder_168090399418.jpg" alt="Aphrodite n.8">
+        <img src="08.wonder_1680903799418.jpg" alt="Aphrodite n.8">
         <div class="gallery-overlay"><span class="gallery-num">n. 8</span></div>
       </div>
       <div class="gallery-item reveal">
@@ -763,7 +818,7 @@
         <div class="gallery-overlay"><span class="gallery-num">n. 99</span></div>
       </div>
       <div class="gallery-item reveal">
-        <img src="78.wonder_1681583284252.jpg" alt="Aphrodite n.78">
+        <img src="78.wonder_1688583284252.jpg" alt="Aphrodite n.78">
         <div class="gallery-overlay"><span class="gallery-num">n. 78</span></div>
       </div>
       <div class="gallery-item reveal">
@@ -863,7 +918,43 @@
     </span>
   </footer>
 
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <span id="lightbox-close" onclick="closeLightbox()">✕ Close</span>
+    <img id="lightbox-img" src="" alt="">
+    <span id="lightbox-num"></span>
+  </div>
+
   <script>
+
+    // Lightbox
+    function openLightbox(src, num) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-num').textContent = 'Aphrodite ' + num;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+    // Attach click to gallery items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', function() {
+        const img = this.querySelector('img');
+        const num = this.querySelector('.gallery-num').textContent;
+        openLightbox(img.src, num);
+      });
+    });
+
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(el => {
